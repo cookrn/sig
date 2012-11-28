@@ -1,0 +1,5 @@
+a=<%= shuffled_again.inspect.gsub(/, /,',') %>
+b=->(*c){c*''}
+d=->(e){eval e}
+f=->(*g){g.map{|h|a[h]}}
+_=->{d[b[f[*<%= coded_indices.inspect.gsub(/\s/,'') %>]]]}
