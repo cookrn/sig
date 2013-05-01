@@ -1,0 +1,22 @@
+                   iiii
+                  i::::i
+                   iiii
+    ssssssssss   iiiiiii    ggggggggg   ggggg
+  ss::::::::::s  i:::::i   g:::::::::ggg::::g
+ss:::::::::::::s  i::::i  g:::::::::::::::::g
+s::::::ssss:::::s i::::i g::::::ggggg::::::gg
+ s:::::s  ssssss  i::::i g:::::g     g:::::g
+   s::::::s       i::::i g:::::g     g:::::g
+      s::::::s    i::::i g:::::g     g:::::g
+ssssss   s:::::s  i::::i g::::::g    g:::::g
+s:::::ssss::::::si::::::ig:::::::ggggg:::::g
+s::::::::::::::s i::::::i g::::::::::::::::g
+ s:::::::::::ss  i::::::i  gg::::::::::::::g
+  sssssssssss    iiiiiiii    gggggggg::::::g
+                                     g:::::g
+                         gggggg      g:::::g
+                         g:::::gg   gg:::::g
+                          g::::::ggg:::::::g
+                           gg:::::::::::::g
+                             ggg::::::ggg
+                                ggggg
