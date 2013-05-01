@@ -19,7 +19,8 @@ I had been trying to develop in a somewhat standard fashion with tests
 and specs and all that other bologna. Bailed on it!
 
 Look in `attempts/` for current working code. Specifically in the files
-with `current` in their name.
+with `current` in their name. Anything else is currently abandoned,
+incomplete, or irrelevant.
 
 ## License
 
