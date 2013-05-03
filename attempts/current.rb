@@ -59,38 +59,40 @@ standard_invocation = "#{ default_function }.()"
 code_size = obfuscated_code.size + standard_invocation.size
 
 size_diff = art_size - code_size
-adjusted = if size_diff > 0
-             safe_divisor = 15
+adjusted =
+  if size_diff > 0
+   safe_divisor = 15
 
-             code        = obfuscated_code.dup
-             count       = size_diff / safe_divisor
-             first       = true
-             var_pointer = 'h' # invalid to start since same as ending var in code
+   code        = obfuscated_code.dup
+   count       = size_diff / safe_divisor
+   first       = true
+   var_pointer = 'h' # invalid to start since same as ending var in code
 
-             template_2 = <<___
+   template_2 = <<___
 <%= new_func %>=->{<%= prev_func %>[]}
 ___
 
-             while count > 0
-               prev_func = first ? default_function : var_pointer
-               new_func  = var_pointer.succ
+   while count > 0
+     prev_func = first ? default_function : var_pointer
+     new_func  = var_pointer.succ
 
-               code << ERB.new( template_2 ).result( binding ).gsub("\n",'')
-               code << "\n"
+     code << ERB.new( template_2 ).result( binding ).gsub("\n",'')
+     code << "\n"
 
-               count -= 1
-               first  = false
-               var_pointer.succ!
-             end
+     count -= 1
+     first  = false
+     var_pointer.succ!
+   end
 
-             code << "#{ new_func }.()"
-             code
-           else
-             obfuscated_code.dup.tap { | code | code << standard_invocation }
-           end
+   code << "#{ new_func }.()"
+   code
+ else
+   obfuscated_code.dup.tap { | code | code << standard_invocation }
+ end
 
-ready_code = adjusted.lines.to_a.map do | line |
-               line.gsub /\r|\n/ , ''
-             end.join ';'
+ready_code =
+  adjusted.lines.to_a.map do | line |
+    line.gsub /\r|\n/ , ''
+  end.join ';'
 
 binding.pry
